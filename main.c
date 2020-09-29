@@ -51,6 +51,7 @@ void delete(int key)
         {
             array[hashIndex]=NULL;
         }
+        hashIndex++;
     }
 }
 
