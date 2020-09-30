@@ -37,6 +37,12 @@ void insert(int key,int data)
     int hashIndex=key%SIZE;
     while(array[hashIndex]!=NULL)
     {
+        if(hashIndex==SIZE-1)
+            {
+            hashIndex=0;
+            continue;
+            }
+        
         hashIndex++;
         hashIndex=hashIndex%SIZE;
     }
