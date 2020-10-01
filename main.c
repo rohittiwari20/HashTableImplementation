@@ -37,14 +37,9 @@ void insert(int key,int data)
     int hashIndex=key%SIZE;
     while(array[hashIndex]!=NULL)
     {
-        if(hashIndex==SIZE-1)
-            {
-            hashIndex=0;
-            continue;
-            }
-        
+       
         hashIndex++;
-        hashIndex=hashIndex%SIZE;
+        hashIndex=hashIndex%SIZE; /* This commands helps when the index got incremented more than the size of array. In this example if hashIndex becomes 20 it can be 0 after this .*/
     }
     array[hashIndex]=item;   
 }
